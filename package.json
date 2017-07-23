@@ -1,0 +1,33 @@
+{
+  "name": "modalite",
+  "version": "1.0.0",
+  "description": "Modal library that is extremely simple.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdodov/modalite.git"
+  },
+  "keywords": [
+    "javascript",
+    "modal",
+    "library",
+    "quick",
+    "easy",
+    "simple",
+    "dialog",
+    "box",
+    "overlay",
+    "fast",
+    "css",
+    "smooth"
+  ],
+  "author": "Hristiyan Dodov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hdodov/modalite/issues"
+  },
+  "homepage": "https://github.com/hdodov/modalite#readme"
+}

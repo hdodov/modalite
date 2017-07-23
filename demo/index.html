@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Modalite Demo</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="modalite.css">
+    <script type="text/javascript" src="modalite.js"></script>
+</head>
+
+<body>
+    <div class="opener-container">
+        <div class="opener"><p data-open-modal="modal1">SHOW ME A MODAL!</p></div>
+        <div class="opener"><p data-open-modal="modal2">HOW DOES THIS CRAP WORK?!</p></div>
+        <div class="opener"><p data-open-modal="modal3">NESTED MODALS???</p></div>
+        <div class="opener"><p data-open-modal="modal4">HOW 2 YOUZE?</p></div>
+    </div>
+
+    <div id="modal1" class="modal" data-modal>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <h1>Look how fucking clean this modal is!</h1>
+                <p>You don't even need any bullshit classes to make it work. No jQuery too. And guess what. Adding modals and triggers dynamically would still work flawlessly without binding and listening to some crappy events.<br><br>Wanna know something more? It's less than fucking <strong>2KB</strong> and needs <strong>no CSS</strong>. It's just a fucking event listener attached to the <code>document</code> object.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal" data-modal>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <h1>Well...</h1>
+                <p>Assuming you've included Modalite in your page, you can just add a few HTML attributes and that's it. No CSS involved. You are only provided with a <code>modal-visible</code> class that you can use to stylize the modal when visible, assuming your default styles define its hidden state.</p>
+
+                <p>When a click inside the <code>document</code> occurs, the clicked element is checked for 3 attributes:</p>
+                <ul>
+                    <li><code class="emp">data-open-modal</code> should possess the value of a modal's <code>id</code>. If an element with the given <code>id</code> is found, it receives the <code>modal-visible</code> class.</li>
+                    <li><code class="emp">data-close-modal</code> means the clicked element's parent tree is searched for an element with a <code>data-modal</code> attribute. If an element is found, the <code>modal-visible</code> class is removed from it.</li>
+                    <li><code class="emp">data-modal</code> is used to indicate what's a modal. If the clicked element has it, it means it's a modal and should be closed, as this is expected modal behaviour. The <code>modal-visible</code> class will be removed from it.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal" data-modal>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <h1><a href="#" data-open-modal="modal3-1">You serious?</a></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3-1" class="modal" data-modal>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <h1>No.</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal" data-modal>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <h1>OK,</h1>
+                <p>You could use the Modalite modal template and CSS if you ain't got time fo that, it takes responsiveness into consideration too. If you're not interested in that, here's a step by step guide on what's needed to craft a modal:</p>
+                <ol>
+                    <li>Add an element with the <code class="emp">data-modal</code> attribute and give it an <code>id</code>. Style it so that it's hidden. You can use the <code>visibility</code> CSS property. It's good for the job, because it's affected by transitions and makes animations a whole lot easier. Add another rule-set for when the element has the <code>modal-visible</code> class. This should define its visible behaviour.</li>
+                    <li>Add an element with the <code class="emp">data-open-modal</code> attribute and set its value to equal the previously created modal's <code>id</code>. When clicked, this will add the <code>modal-visible</code> class to the targeted modal and show it.</li>
+                    <li>Eyyy, it's working.</li>
+                    <li>Optionally, you can add a close button for the modal. By default, it will be closed when its background is clicked, as this is expected modal behaviour. To add a close functionality, simply add any element <b>inside</b> the modal and give it the <code class="emp">data-close-modal</code> attribute.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
