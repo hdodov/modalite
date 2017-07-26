@@ -70,9 +70,3 @@ li {
         .opener p:hover {
             opacity: 0.7;
         }
-
-.modal-close {
-    background-image: url("close.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-}

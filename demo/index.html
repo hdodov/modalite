@@ -11,10 +11,25 @@
 
 <body>
     <div class="opener-container">
+        <div class="opener"><p data-open-modal="test">TEST</p></div>
         <div class="opener"><p data-open-modal="modal1">SHOW ME A MODAL!</p></div>
         <div class="opener"><p data-open-modal="modal2">HOW DOES THIS CRAP WORK?!</p></div>
         <div class="opener"><p data-open-modal="modal3">NESTED MODALS???</p></div>
         <div class="opener"><p data-open-modal="modal4">HOW 2 YOUZE?</p></div>
+    </div>
+
+    <div id="test" class="modal" data-modal data-modal-has-remote>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <div data-modal-remote="test1.txt"></div>
+                <div data-modal-remote="test2.txt"></div>
+                <div data-modal-remote="test3"></div>
+
+                <iframe src="" data-modal-remote="index.html"></iframe>
+            </div>
+        </div>
     </div>
 
     <div id="modal1" class="modal" data-modal>
