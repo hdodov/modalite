@@ -69,11 +69,11 @@ li {
         border-radius: 10px;
         cursor: pointer;
 
-        transition: all 0.2s ease-out;
+        transition: background 0.2s ease-out;
     }
 
     .openers-container p:hover {
-        opacity: 0.7;
+        background: #226ee8;
     }
 
 #modal-iframe .modal-content {
@@ -85,8 +85,4 @@ li {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-.modal-content p:last-child {
-    margin-bottom: 0;
 }

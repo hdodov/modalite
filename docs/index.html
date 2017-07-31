@@ -12,11 +12,11 @@
 
 <body>
     <div class="openers-container">
-        <p style="background: #5d3dea;" data-open-modal="modal-show-me">SHOW ME A MODAL!</p>
-        <p style="background: #1e6ace;" data-open-modal="modal-nested">NESTED MODALS?</p>
-        <p style="background: #1e6ace;" data-open-modal="modal-remote">REMOTE CONTENT?</p>
-        <p style="background: #1e6ace;" data-open-modal="modal-iframe">WHAT ABOUT IFRAMES?</p>
-        <p style="background: #0ca1ce;" data-open-modal="modal-work">HOW DOES THIS CRAP WORK?!</p>
+        <p style="opacity: 1.0" data-open-modal="modal-show-me">SHOW ME A MODAL!</p>
+        <p style="opacity: 0.9" data-open-modal="modal-nested">NESTED MODALS?</p>
+        <p style="opacity: 0.8" data-open-modal="modal-remote">REMOTE CONTENT?</p>
+        <p style="opacity: 0.7" data-open-modal="modal-iframe">WHAT ABOUT IFRAMES?</p>
+        <p style="opacity: 0.6" data-open-modal="modal-work">HOW DOES THIS CRAP WORK?!</p>
     </div>
 
     <div id="modal-show-me" class="modal" data-modal>
@@ -25,7 +25,7 @@
 
             <div class="modal-content">
                 <h1>Look how fucking clean this modal is!</h1>
-                <p>You don't even need any bullshit classes to make it work. No jQuery too. And guess what. Adding modals and triggers dynamically would still work flawlessly without binding and listening to some crappy events.<br><br>Wanna know something more? It's less than fucking <strong>2KB</strong> and needs <strong>no CSS</strong>. It's just a fucking event listener attached to the <code>document</code> object.</p>
+                <p>You don't even need any bullshit classes to make it work. No jQuery. Basically no CSS too. And guess what. Adding modals and triggers dynamically would still work flawlessly without binding and listening to some crappy events.<br><br>It's just a fucking event listener.</p>
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@
             <div class="modal-close" data-close-modal></div>
 
             <div class="modal-content">
-                <iframe src="" data-modal-remote="https://hdodov.github.io/modalite/"></iframe>
+                <iframe src="" data-modal-remote="https://en.wikipedia.org/wiki/Modal_window"></iframe>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
 
             <div class="modal-content">
                 <h1>Well...</h1>
-                <p>Assuming you've included Modalite in your page, you can just add a few HTML attributes and that's it. No CSS involved. You are only provided with a <code>modal-visible</code> class that you can use to stylize the modal when visible, assuming your default styles define its hidden state.</p>
+                <p>If you've included Modalite in your page, you can just add a few HTML attributes and that's it. You're provided with a <code>modal-visible</code> class that you can use to stylize the modal when visible, assuming your default styles define its hidden state.</p>
 
                 <p>When a click inside the <code>document</code> occurs, the clicked element is checked for 3 attributes:</p>
                 <ul>
@@ -96,7 +96,7 @@
 
                 <hr>
 
-                <strong>To learn more about Modalite, including how to install and use, visit its <a target="_blank" href="https://github.com/hdodov/modalite">GitHub page</a>! See you there! ✌️</strong>
+                <p><strong>To learn more about Modalite, including how to install and use, visit its <a target="_blank" href="https://github.com/hdodov/modalite">GitHub page</a>! See you there! ✌️</strong></p>
             </div>
         </div>
     </div>
