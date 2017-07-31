@@ -11,14 +11,12 @@
 </head>
 
 <body>
-    <div style="padding: 1rem 0;">
-        <div class="opener"><p style="background: #5d3dea;" data-open-modal="modal-show-me">SHOW ME A MODAL!</p></div>
-        <div class="opener"><p style="background: #1e6ace;" data-open-modal="modal-nested">NESTED MODALS?</p></div>
-        <div class="opener"><p style="background: #1e6ace;" data-open-modal="modal-remote">REMOTE CONTENT?</p></div>
-        <div class="opener"><p style="background: #1e6ace;" data-open-modal="modal-iframe">WHAT ABOUT IFRAMES?</p></div>
-        <div class="opener"><p style="background: #0ca1ce;" data-open-modal="modal-work">HOW DOES THIS CRAP WORK?!</p></div>
-        <div class="opener"><p style="background: #0ca1ce;" data-open-modal="modal-remote-work">HOW DOES THE REMOTE CRAP WORK?!</p></div>
-        <div class="opener"><p style="background: #0ca1ce;" data-open-modal="modal-use">HOW 2 YOUZE?!</p></div>
+    <div class="openers-container">
+        <p style="background: #5d3dea;" data-open-modal="modal-show-me">SHOW ME A MODAL!</p>
+        <p style="background: #1e6ace;" data-open-modal="modal-nested">NESTED MODALS?</p>
+        <p style="background: #1e6ace;" data-open-modal="modal-remote">REMOTE CONTENT?</p>
+        <p style="background: #1e6ace;" data-open-modal="modal-iframe">WHAT ABOUT IFRAMES?</p>
+        <p style="background: #0ca1ce;" data-open-modal="modal-work">HOW DOES THIS CRAP WORK?!</p>
     </div>
 
     <div id="modal-show-me" class="modal" data-modal>
@@ -104,46 +102,6 @@
                 <hr>
 
                 <strong>To learn more about Modalite, including how to install and use, visit its <a target="_blank" href="https://github.com/hdodov/modalite">GitHub page</a>! See you there! ✌️</strong>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-remote-work" class="modal" data-modal>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
-
-            <div class="modal-content">
-                <h1>Remote modals rock!</h1>
-                <p>Have a 5MB Privacy Policy? Remote modals are the way. No need to demolish your page loading times with something nobody&apos;s going to read. <i>Ever.</i></p>
-
-                <hr>
-
-                <p>When the modal is opened, its contents are searched for elements with the <code>data-modal-remote</code> attribute. It should hold the URL to the desired resource. However, DOM operations can be costly, especially for large elements. Suppose you decided to actually splatter that Privacy Policy directly in your modal. It could have thousands of elements... searching for an attribute that might not even exist will be a huge overhead.</p>
-
-                <p>That's why the remote modal must have the <code>data-modal-has-remote</code> attribute. Without it, you'll just be having a regular modal. No DOM searches will be performed whatsoever.</p>
-
-                <p>When an element with <code>data-modal-remote</code> is found, two things can happen:</p>
-                <ul>
-                    <li>If the element is <strong>not</strong> an <code>&lt;iframe&gt;</code>, an XHR to the remote URL will be initiated. If its status code is between 200 and 299 (inclusive), the contents of the element will be replaced with the XHR response.</li>
-                    <li>If the element <strong>is</strong> an <code>&lt;iframe&gt;</code>, its <code>src</code> attribute will simply be set to the remote URL specified in <code>data-modal-remote</code>.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-use" class="modal" data-modal>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
-
-            <div class="modal-content">
-                <h1>OK,</h1>
-                <p>You could use the Modalite modal template and CSS if you ain't got time fo that, it takes responsiveness into consideration too. If you're not interested in that, here's a step by step guide on what's needed to craft a modal:</p>
-                <ol>
-                    <li>Add an element with the <code class="emp">data-modal</code> attribute and give it an <code>id</code>. Style it so that it's hidden. You can use the <code>visibility</code> CSS property. It's good for the job, because it's affected by transitions and makes animations a whole lot easier. Add another rule-set for when the element has the <code>modal-visible</code> class. This should define its visible behaviour.</li>
-                    <li>Add an element with the <code class="emp">data-open-modal</code> attribute and set its value to equal the previously created modal's <code>id</code>. When clicked, this will add the <code>modal-visible</code> class to the targeted modal and show it.</li>
-                    <li>Eyyy, it's working.</li>
-                    <li>Optionally, you can add a close button for the modal. By default, it will be closed when its background is clicked, as this is expected modal behaviour. To add a close functionality, simply add any element <b>inside</b> the modal and give it the <code class="emp">data-close-modal</code> attribute.</li>
-                </ol>
             </div>
         </div>
     </div>

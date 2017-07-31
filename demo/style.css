@@ -6,7 +6,7 @@ html, body {
 
     background: #eee;
     font-size: 18px;
-    font-size: calc(12px + 0.5vw);
+    font-size: 2vh;
     font-family: sans-serif;
     line-height: 1.5;
     color: #333;
@@ -42,16 +42,25 @@ li {
     margin-top: 1rem;
 }
 
-.opener {
-    width: 100%;
+.openers-container {
+    display: flex;
     text-align: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    padding: 2rem 0;
 }
 
-    .opener p {
+    .openers-container p {
         display: inline-block;
         width: 50%;
-        margin: 1rem 0px;
-        padding: 2rem;
+        margin: 1rem 0;
+        padding: 2rem;    
 
         background: #5d3dea;
         color: #eee;
@@ -63,7 +72,7 @@ li {
         transition: all 0.2s ease-out;
     }
 
-    .opener p:hover {
+    .openers-container p:hover {
         opacity: 0.7;
     }
 
@@ -76,4 +85,8 @@ li {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+.modal-content p:last-child {
+    margin-bottom: 0;
 }

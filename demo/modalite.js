@@ -1,10 +1,10 @@
 (function () {
-    var _class_remote_success = "modal-remote-success"
-    ,   _class_remote_error   = "modal-remote-error"
-    ,   _class_remote_loading = "modal-remote-loading"
+    var _class_modal_visible  = "modal-visible"
     ,   _class_modal_loading  = "modal-loading"
     ,   _class_modal_loaded   = "modal-loaded"
-    ,   _class_modal_visible  = "modal-visible"
+    ,   _class_remote_success = "modal-remote-success"
+    ,   _class_remote_error   = "modal-remote-error"
+    ,   _class_remote_loading = "modal-remote-loading"
 
     ,   _attr_modal_remote     = "data-modal-remote"
     ,   _attr_modal_has_remote = "data-modal-has-remote"

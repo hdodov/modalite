@@ -1,3 +1,5 @@
+$modalite-breakpoint: 480px;
+
 $modalite-close-url: url("assets/close.png");
 $modalite-close-diameter: 32px;
 
@@ -49,7 +51,9 @@ $modalite-spinner-height: 30px;
     width: 100%;
     height: 100%;
     max-width: 650px;
+    max-width: 40rem;
     max-height: 500px;
+    max-height: 30rem;
 
     transform: scale(0.9);
     transition: transform 0.3s ease-out;
@@ -151,4 +155,19 @@ $modalite-spinner-height: 30px;
     padding: 2rem;
 
     overflow: auto;
+}
+
+@media (max-width: $modalite-breakpoint) {
+    .modal {
+        display: block;
+        padding: 1.5rem;
+    }
+
+    .modal-container {
+        max-height: none;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
 }
