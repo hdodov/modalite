@@ -3,36 +3,25 @@
 
 <head>
     <title>Modalite Demo</title>
+    
+    <link rel="stylesheet" type="text/css" href="modalite.min.css">
+    <script type="text/javascript" src="modalite.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="modalite.css">
-    <script type="text/javascript" src="modalite.js"></script>
 </head>
 
 <body>
-    <div class="opener-container">
-        <div class="opener"><p data-open-modal="test">TEST</p></div>
-        <div class="opener"><p data-open-modal="modal1">SHOW ME A MODAL!</p></div>
-        <div class="opener"><p data-open-modal="modal2">HOW DOES THIS CRAP WORK?!</p></div>
-        <div class="opener"><p data-open-modal="modal3">NESTED MODALS???</p></div>
-        <div class="opener"><p data-open-modal="modal4">HOW 2 YOUZE?</p></div>
+    <div style="padding: 1rem 0;">
+        <div class="opener"><p style="background: #5d3dea;" data-open-modal="modal-show-me">SHOW ME A MODAL!</p></div>
+        <div class="opener"><p style="background: #1e6ace;" data-open-modal="modal-nested">NESTED MODALS?</p></div>
+        <div class="opener"><p style="background: #1e6ace;" data-open-modal="modal-remote">REMOTE CONTENT?</p></div>
+        <div class="opener"><p style="background: #1e6ace;" data-open-modal="modal-iframe">WHAT ABOUT IFRAMES?</p></div>
+        <div class="opener"><p style="background: #0ca1ce;" data-open-modal="modal-work">HOW DOES THIS CRAP WORK?!</p></div>
+        <div class="opener"><p style="background: #0ca1ce;" data-open-modal="modal-remote-work">HOW DOES THE REMOTE CRAP WORK?!</p></div>
+        <div class="opener"><p style="background: #0ca1ce;" data-open-modal="modal-use">HOW 2 YOUZE?!</p></div>
     </div>
 
-    <div id="test" class="modal" data-modal data-modal-has-remote>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
-
-            <div class="modal-content">
-                <div data-modal-remote="test1.txt"></div>
-                <div data-modal-remote="test2.txt"></div>
-                <div data-modal-remote="test3"></div>
-
-                <iframe src="" data-modal-remote="index.html"></iframe>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal1" class="modal" data-modal>
+    <div id="modal-show-me" class="modal" data-modal>
         <div class="modal-container">
             <div class="modal-close" data-close-modal></div>
 
@@ -43,7 +32,61 @@
         </div>
     </div>
 
-    <div id="modal2" class="modal" data-modal>
+    <div id="modal-nested" class="modal" data-modal>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <h1><a href="#" data-open-modal="modal-nested-child">You serious?</a></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-nested-child" class="modal" data-modal>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <h1>No.</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-remote" class="modal modal-remote" data-modal data-modal-has-remote>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <div data-modal-remote="test/textfile.html"></div>
+
+                <hr>
+
+                <div data-modal-remote="test/textfile-two.html"></div>
+
+                <hr>
+
+                <h1>Let's try something nonexistent:</h1>
+                <div data-modal-remote="snoopdogg.txt"></div>
+
+                <hr>
+
+                <h1>Here's some <a target="_blank" href="https://baconipsum.com/api/">Bacon Ipsum</a>:</h1>
+                <div data-modal-remote="https://baconipsum.com/api/?type=all-meat&paras=1&format=html"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-iframe" class="modal modal-remote" data-modal data-modal-has-remote>
+        <div class="modal-container">
+            <div class="modal-close" data-close-modal></div>
+
+            <div class="modal-content">
+                <iframe src="" data-modal-remote="https://hdodov.github.io/modalite/"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-work" class="modal" data-modal>
         <div class="modal-container">
             <div class="modal-close" data-close-modal></div>
 
@@ -57,31 +100,38 @@
                     <li><code class="emp">data-close-modal</code> means the clicked element's parent tree is searched for an element with a <code>data-modal</code> attribute. If an element is found, the <code>modal-visible</code> class is removed from it.</li>
                     <li><code class="emp">data-modal</code> is used to indicate what's a modal. If the clicked element has it, it means it's a modal and should be closed, as this is expected modal behaviour. The <code>modal-visible</code> class will be removed from it.</li>
                 </ul>
+
+                <hr>
+
+                <strong>To learn more about Modalite, including how to install and use, visit its <a target="_blank" href="https://github.com/hdodov/modalite">GitHub page</a>! See you there! ✌️</strong>
             </div>
         </div>
     </div>
 
-    <div id="modal3" class="modal" data-modal>
+    <div id="modal-remote-work" class="modal" data-modal>
         <div class="modal-container">
             <div class="modal-close" data-close-modal></div>
 
             <div class="modal-content">
-                <h1><a href="#" data-open-modal="modal3-1">You serious?</a></h1>
+                <h1>Remote modals rock!</h1>
+                <p>Have a 5MB Privacy Policy? Remote modals are the way. No need to demolish your page loading times with something nobody&apos;s going to read. <i>Ever.</i></p>
+
+                <hr>
+
+                <p>When the modal is opened, its contents are searched for elements with the <code>data-modal-remote</code> attribute. It should hold the URL to the desired resource. However, DOM operations can be costly, especially for large elements. Suppose you decided to actually splatter that Privacy Policy directly in your modal. It could have thousands of elements... searching for an attribute that might not even exist will be a huge overhead.</p>
+
+                <p>That's why the remote modal must have the <code>data-modal-has-remote</code> attribute. Without it, you'll just be having a regular modal. No DOM searches will be performed whatsoever.</p>
+
+                <p>When an element with <code>data-modal-remote</code> is found, two things can happen:</p>
+                <ul>
+                    <li>If the element is <strong>not</strong> an <code>&lt;iframe&gt;</code>, an XHR to the remote URL will be initiated. If its status code is between 200 and 299 (inclusive), the contents of the element will be replaced with the XHR response.</li>
+                    <li>If the element <strong>is</strong> an <code>&lt;iframe&gt;</code>, its <code>src</code> attribute will simply be set to the remote URL specified in <code>data-modal-remote</code>.</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <div id="modal3-1" class="modal" data-modal>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
-
-            <div class="modal-content">
-                <h1>No.</h1>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal" data-modal>
+    <div id="modal-use" class="modal" data-modal>
         <div class="modal-container">
             <div class="modal-close" data-close-modal></div>
 
@@ -97,6 +147,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

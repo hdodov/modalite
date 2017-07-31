@@ -98,7 +98,7 @@
             function () {
                 resources -= 1;
                 if (resources <= 0) {
-                    //modal.classList.remove(_class_modal_loading);
+                    modal.classList.remove(_class_modal_loading);
                     modal.classList.add(_class_modal_loaded);
                 }
             }
