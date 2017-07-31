@@ -1,7 +1,7 @@
 {
   "name": "modalite",
-  "version": "1.0.0",
-  "description": "Modal library that is extremely simple.",
+  "version": "1.1.0",
+  "description": "The most simple and flexible modal library, now with support for remote resources and iframes.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,12 +11,21 @@
     "url": "git+https://github.com/hdodov/modalite.git"
   },
   "keywords": [
-    "javascript",
     "modal",
+    "flexible",
+    "simple",
+    "easy",
+    "javascript",
+    "page",
+    "remote",
+    "external",
+    "resource",
+    "ajax",
+    "xhr",
+    "resource",
+    "iframe",
     "library",
     "quick",
-    "easy",
-    "simple",
     "dialog",
     "box",
     "overlay",
