@@ -107,6 +107,23 @@ This would be a fully functioning _remote_ modal:
 
 **Note: You can load any file type, as long as it's text. If you're loading HTML, be wary... it may contain harmful `<script>` tags that could inject JavaScript and compromise the security of your site!**
 
+# API
+Modals are opened and closed just by adding/removing their visibility class. However, if the modal has to load any remote resources, that won't be enough.
+
+```js
+/**
+ * Adds the visibility class to a modal and loads its remotes.
+ * @param  {object/string} modal The modal DOM element or its ID attribute.
+ */
+Modalite.open(modal);
+
+/**
+ * Removes the visibility class from a modal.
+ * @param  {object/string} modal The modal DOM element or its ID attribute.
+ */
+Modalite.close(modal);
+```
+
 # Styling guide
 Here are the CSS classes provided by Modailte that you can use to style your modals.
 
@@ -124,3 +141,8 @@ Added to all elements with attribute `data-modal-remote`.
 - `modal-remote-loading`: Added when the remote starts loading. Removed when the remote has loaded or failed to do so.
 - `modal-remote-success`: Added when the remote has successfully loaded. Iframe remotes get this class when their `load` event triggers.
 - `modal-remote-error`: Added if the XHR response status code isn't in the 200-299 range. Iframe remotes don't get this class as there is no way to check whether they have successfully loaded.
+
+# Changelog
+- 1.0.0 - Initial release.
+- 1.1.0 - Added support for modals with external resources.
+- 1.2.0 - Exposed the `openModal()` and `closeModal()` functions to control modals via code.
