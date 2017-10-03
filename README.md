@@ -2,7 +2,7 @@
 Is the simplest JavaScript modal library. **No jQuery.** Just a few HTML attributes.
 
 # [Demo](https://hdodov.github.io/modalite/)
-Can be seen [here](https://hdodov.github.io/modalite/).
+Can be seen [here](https://hdodov.github.io/modalite/) or in [this fiddle](https://jsfiddle.net/hdodov/nfj28m8h/).
 
 # Installation
 
