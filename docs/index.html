@@ -4,99 +4,103 @@
 <head>
     <title>The simplest and most flexible modal library &middot; Modalite</title>
     
-    <link rel="stylesheet" type="text/css" href="modalite.min.css">
-    <script type="text/javascript" src="modalite.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/modalite.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/modalite.js"></script>
 </head>
 
 <body>
     <div class="openers-container">
-        <p style="opacity: 1.0" data-open-modal="modal-show-me">SHOW ME A MODAL!</p>
-        <p style="opacity: 0.9" data-open-modal="modal-nested">NESTED MODALS?</p>
-        <p style="opacity: 0.8" data-open-modal="modal-remote">REMOTE CONTENT?</p>
-        <p style="opacity: 0.7" data-open-modal="modal-iframe">WHAT ABOUT IFRAMES?</p>
-        <p style="opacity: 0.6" data-open-modal="modal-work">HOW DOES THIS CRAP WORK?!</p>
+        <p style="opacity: 1.0" data-modalite-open="modal-show-me">SHOW ME A MODAL!</p>
+        <p style="opacity: 0.9" data-modalite-open="modal-nested">NESTED MODALS?</p>
+        <p style="opacity: 0.8" data-modalite-open="modal-remote">REMOTE CONTENT?</p>
+        <p style="opacity: 0.7" data-modalite-open="modal-iframe">WHAT ABOUT IFRAMES?</p>
+        <p class="em" data-modalite-open="modal-started">LET'S GET STARTED!!!</p>
     </div>
 
-    <div id="modal-show-me" class="modal" data-modal>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
+    <div id="modal-show-me" class="modalite-modal" data-modalite-modal>
+        <div class="modalite-container">
+            <div class="modalite-close" data-modalite-close></div>
 
-            <div class="modal-content">
+            <div class="modalite-content">
                 <h1>Look how fucking clean this modal is!</h1>
-                <p>You don't even need any bullshit classes to make it work. No jQuery. Basically no CSS too. And guess what. Adding modals and triggers dynamically would still work flawlessly without binding and listening to some crappy events.<br><br>It's just an event listener.</p>
+                <p>You don't even need any classes to make it work. <strong>No jQuery.</strong> Basically, no CSS too. And guess what. Adding modals and triggers dynamically would still work great without binding and listening to some crappy events.</p>
             </div>
         </div>
     </div>
 
-    <div id="modal-nested" class="modal" data-modal>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
+    <div id="modal-nested" class="modalite-modal" data-modalite-modal>
+        <div class="modalite-container">
+            <div class="modalite-close" data-modalite-close></div>
 
-            <div class="modal-content">
-                <h1><a href="#" data-open-modal="modal-nested-child">You serious?</a></h1>
+            <div class="modalite-content">
+                <h1><a href="#" data-modalite-open="modal-nested-child">You serious?</a></h1>
             </div>
         </div>
     </div>
 
-    <div id="modal-nested-child" class="modal" data-modal>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
+    <div id="modal-nested-child" class="modalite-modal" data-modalite-modal>
+        <div class="modalite-container">
+            <div class="modalite-close" data-modalite-close></div>
 
-            <div class="modal-content">
+            <div class="modalite-content">
                 <h1>No.</h1>
             </div>
         </div>
     </div>
 
-    <div id="modal-remote" class="modal modal-remote" data-modal data-modal-has-remote>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
+    <div id="modal-remote" class="modalite-modal modalite-remote" data-modalite-modal data-modalite-has-remote>
+        <div class="modalite-container">
+            <div class="modalite-close" data-modalite-close></div>
 
-            <div class="modal-content">
-                <div data-modal-remote="test/textfile.html"></div>
-
-                <hr>
-
-                <div data-modal-remote="test/textfile-two.html"></div>
+            <div class="modalite-content">
+                <div data-modalite-remote="test/textfile.html"></div>
 
                 <hr>
 
-                <h1>Here's some <a target="_blank" href="https://baconipsum.com/api/">Bacon Ipsum</a>:</h1>
-                <div data-modal-remote="https://baconipsum.com/api/?type=all-meat&paras=1&format=html"></div>
+                <div data-modalite-remote="test/textfile-two.html"></div>
+
+                <hr>
+
+                <h1>Here's some <a target="_blank" href="https://baconipsum.com/api/?utm-source=modalite">Bacon Ipsum</a>:</h1>
+                <div data-modalite-remote="https://baconipsum.com/api/?type=all-meat&paras=1&format=html"></div>
             </div>
         </div>
     </div>
 
-    <div id="modal-iframe" class="modal modal-remote" data-modal data-modal-has-remote>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
+    <div id="modal-iframe" class="modalite-modal modalite-remote modalite-iframe" data-modalite-modal data-modalite-has-remote>
+        <div class="modalite-container">
+            <div class="modalite-close" data-modalite-close></div>
 
-            <div class="modal-content">
-                <iframe src="" data-modal-remote="https://en.wikipedia.org/wiki/Modal_window"></iframe>
+            <div class="modalite-content">
+                <iframe src="" data-modalite-remote="https://en.wikipedia.org/wiki/Modal_window"></iframe>
             </div>
         </div>
     </div>
 
-    <div id="modal-work" class="modal" data-modal>
-        <div class="modal-container">
-            <div class="modal-close" data-close-modal></div>
+    <div id="modal-started" class="modalite-modal" data-modalite-modal>
+        <div class="modalite-container">
+            <div class="modalite-close" data-modalite-close></div>
 
-            <div class="modal-content">
-                <h1>Well...</h1>
-                <p>If you've included Modalite in your page, you can just add a few HTML attributes and that's it. You're provided with a <code>modal-visible</code> class that you can use to stylize the modal when visible, assuming your default styles define its hidden state.</p>
+            <div class="modalite-content">
+                <div class="text">
+                    <h1>Great enthusiasm!</h1>
 
-                <p>When a click inside the <code>document</code> occurs, the clicked element is checked for 3 attributes:</p>
-                <ul>
-                    <li><code class="emp">data-open-modal</code> should possess the value of a modal's <code>id</code>. If an element with the given <code>id</code> is found, it receives the <code>modal-visible</code> class.</li>
-                    <li><code class="emp">data-close-modal</code> means the clicked element's parent tree is searched for an element with a <code>data-modal</code> attribute. If an element is found, the <code>modal-visible</code> class is removed from it.</li>
-                    <li><code class="emp">data-modal</code> is used to indicate what's a modal. If the clicked element has it, it means it's a modal and should be closed, as this is expected modal behaviour. The <code>modal-visible</code> class will be removed from it.</li>
-                </ul>
+                    <hr>
 
-                <hr>
+                    <p><strong>Head over to Modalite's <a target="_blank" href="https://github.com/hdodov/modalite">GitHub page</a>! See you there! ✌️</strong></p>
 
-                <p><strong>To learn more about Modalite, including how to install and use, visit its <a target="_blank" href="https://github.com/hdodov/modalite">GitHub page</a>! See you there! ✌️</strong></p>
+                    <hr>
+
+                    <p>If you like my shitty code, consider a donation.<br><small style="opacity: 0.3;">I'll use that money for drugs. <!-- In the form of caffeine. --></small></p>
+
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="display: block; margin: 1.4em 0;">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="BJYF6LCVLXDFW">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" style="display: none;">
+                    </form>
+                </div>
             </div>
         </div>
     </div>

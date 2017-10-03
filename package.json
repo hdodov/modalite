@@ -1,7 +1,7 @@
 {
   "name": "modalite",
-  "version": "1.2.0",
-  "description": "The most simple and flexible modal library, now with support for remote resources and iframes.",
+  "version": "2.0.0",
+  "description": "The most simple and flexible JavaScript modal library.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,7 @@
     "modal",
     "dialog",
     "box",
+    "popup",
     "overlay",
     "page",
     "remote",
@@ -23,7 +24,6 @@
     "ajax",
     "xhr",
     "css",
-
     "flexible",
     "simple",
     "easy",
@@ -36,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/hdodov/modalite/issues"
   },
-  "homepage": "https://github.com/hdodov/modalite#readme"
+  "homepage": "https://github.com/hdodov/modalite#readme",
+  "devDependencies": {
+    "bourbon": "^4.3.4"
+  }
 }
